@@ -1,9 +1,0 @@
----
-title: 'Mencoba ke Malang Skyland Untuk Liburan Lebaran'
-description: 'Harga Tiket, Rute, Jam Buka Malang Skyland Saat Lebaran.'
-date: 2026-03-28
-tags: ['other', 'travel']
-imageWithText: 'assets/banner.png'
-imageWithoutText: 'assets/banner-textless.png'
-authors: ['sudar']
----
