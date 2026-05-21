@@ -24,36 +24,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  frames: {
-        showCopyToClipboardButton: true,
-      },
-      styleOverrides: {
-        codeFontSize: '0.75rem',
-        borderColor: 'var(--border)',
-        codeFontFamily: 'var(--font-mono)',
-        codeBackground: 'color-mix(in oklab, var(--muted) 25%, transparent)',
-        frames: {
-          copyIcon: createInlineSvgUrl(lucideCopyIcon),
-          editorActiveTabForeground: 'var(--muted-foreground)',
-          editorActiveTabBackground:
-            'color-mix(in oklab, var(--muted) 25%, transparent)',
-          editorActiveTabIndicatorBottomColor: 'transparent',
-          editorActiveTabIndicatorTopColor: 'transparent',
-          editorTabBorderRadius: '0',
-          editorTabBarBackground: 'transparent',
-          editorTabBarBorderBottomColor: 'transparent',
-          frameBoxShadowCssValue: 'none',
-          terminalBackground:
-            'color-mix(in oklab, var(--muted) 25%, transparent)',
-          terminalTitlebarBackground: 'transparent',
-          terminalTitlebarBorderBottomColor: 'transparent',
-          terminalTitlebarForeground: 'var(--muted-foreground)',
-          inlineButtonBorder: 'none',
-          inlineButtonBackground: 'green',
-        },
-        lineNumbers: {
-          foreground: 'var(--muted-foreground)',
-        },
         uiFontFamily: 'var(--font-sans)',
       },
   server: {
