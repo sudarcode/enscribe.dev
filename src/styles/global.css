@@ -41,6 +41,13 @@
   font-style: italic;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Bon Vivant';
+  src: url('/fonts/BonVivant.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --background: oklch(0.1722 0.0041 75);
