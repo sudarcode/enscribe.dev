@@ -106,4 +106,10 @@
   ::file-selector-button {
     @apply border-border outline-ring/50 tracking-tight;
   }
+
+
+@layer utilities {
+  .font-caveat {
+    font-family: var(--font-caveat), cursive;
+  }
 }
