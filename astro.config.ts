@@ -24,8 +24,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-        uiFontFamily: 'var(--font-sans)',
-      },
   server: {
     port: 1234,
     host: true,
