@@ -1,40 +1,126 @@
 ---
-// import Albums from '@/components/about/Albums.astro'
+// Components
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import PageHead from '@/components/PageHead.astro'
-import Layout from '@/layouts/Layout.astro'
-import { Content } from '../content/about.mdx'
 
-// const sections = [
-//   {
-//     question: 'What type of music do you listen to?',
-//     answer: `Music is a really important part of my life! I play and arrange classical guitar music, and I frequently attend concerts. Here is my <a href="https://last.fm/user/enscribe" target="_blank" rel="noopener noreferrer" class="text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors">Last.fm</a> profile, and here are my favorite LPs/EPs/cherry-picked tracks of all time:`,
-//     ContentComponent: Albums,
-//   },
-// ]
+// Layouts
+import Layout from '@/layouts/Layout.astro'
+
+// Utils & Data
+import { Image } from 'astro:assets'
+import infinullImage from '/public/static/bento/infinull-paperframe.png'
+import profileImage from '/public/static/bento/profile.png'
+
+// Data
+const age = new Date().getFullYear() - 2002
+
+// Constants
+const zohoUrl = 'https://www.zoho.com'
 ---
 
-<Layout>
+<!-- OUTLINE (basically it should be a ME page)
+  - Hero Section With SubSection and text
+  - Image Gallery of Me (bento box style)
+-->
+<Layout class="max-w-3xl">
   <PageHead slot="head" title="About" />
-  <div class="mx-auto w-full max-w-[calc(var(--container-3xl)-2rem)]">
-    <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
+  <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
+  <div class="about-page flex flex-col gap-y-8">
+    <!-- Header section with profile photos -->
+    <section
+      class="bg-grid-pattern flex flex-col items-center gap-6 p-6 pb-0 text-center"
+    >
+      <div class="relative flex items-center justify-center">
+        <!-- My Profile -->
+        <div
+          class="group relative z-0 -rotate-2 transition-transform duration-300 hover:scale-105 hover:rotate-[-4deg]"
+        >
+          <Image
+            src={profileImage}
+            alt="Sedhu Madhav"
+            class="group-hover:shadow-foreground/15 relative block h-auto w-48 shadow-lg transition-shadow duration-300 group-hover:shadow-xl"
+          />
+          <p
+            class="font-caveat text-foreground dark:text-background text-md absolute -bottom-[-0.5em] left-1/2 -translate-x-1/2 whitespace-nowrap"
+          >
+            me again :)
+          </p>
+        </div>
+        <!-- Infinull Profile -->
+        <div
+          class="group relative z-10 -ml-8 rotate-2 transition-transform duration-300 hover:scale-105 hover:rotate-4"
+        >
+          <Image
+            src={infinullImage}
+            alt="Infinull logo"
+            class="group-hover:shadow-foreground/15 relative block h-auto w-32 translate-y-14 shadow-lg transition-shadow duration-300 group-hover:shadow-xl"
+          />
+          <p
+            class="font-caveat text-foreground dark:text-background absolute -bottom-[4.25em] left-1/2 -translate-x-1/2 text-xs whitespace-nowrap"
+          >
+            the other me
+          </p>
+        </div>
+      </div>
+      <h1 class="font-bon-vivant pt-4 text-8xl font-bold">
+        who's <br />
+        <span class="text-accent -mt-10 block font-sans text-7xl font-black"
+          >Infinull?</span
+        >
+      </h1>
+    </section>
+
+    <!-- About Me Section -->
+    <section>
+      <div>
+        <p class="prose prose-sm text-muted-foreground max-w-none">
+          Hey! I'm <span class="bold text-foreground">Sedhu Madhav</span> aka Infinull,
+          {age} year old software dev from Tamilnadu, India. Right now, I'm working
+          as a Backend Developer at{' '}
+          <a
+            href={zohoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-accent decoration-accent underline"
+          >
+            Zoho
+          </a>
+        </p>
+        <p class="prose prose-sm text-muted-foreground max-w-none pt-4">
+          I started out as a Computer Science graduate, curious about how things
+          work under the hood. Somewhere along the way, that curiosity turned
+          into a passion - and eventually, a career I genuinely enjoy.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section>
+      <h2 class="font-bon-vivant text-accent mb-4 text-5xl font-semibold">
+        skills, <span class="text-foreground font-sans text-4xl">you ask?</span>
+      </h2>
+
+      <p class="prose prose-sm text-muted-foreground max-w-3xl leading-relaxed">
+        I primarily work on web projects, focusing on the backend — APIs, Logic,
+        DBs and stuff. Every now and then, I start messing around with frontend
+        too, crafting sites that I find cool — like this one.
+      </p>
+    </section>
+
+    <!-- Interests Section -->
+    <section>
+      <h2 class="text-accent font-bon-vivant mb-4 text-6xl font-semibold">
+        <span class="relative -top-1 inline-block">hobbies</span>
+        <span class="text-foreground font-sans text-4xl">& stuff</span>
+      </h2>
+
+      <p class="text-muted-foreground max-w-3xl leading-relaxed">
+        I love anime, music, and obviously - coding. I spend my time hopping
+        between playlists, episodes, and terminals.
+      </p>
+    </section>
   </div>
-
-  <section class="flex flex-col gap-4">
-    <div class="mx-auto max-w-[calc(var(--container-3xl)-2rem)]">
-      <article class="prose">
-        <Content />
-      </article>
-    </div>
-
-    <!-- <div class="mx-auto w-full max-w-5xl">
-      {
-        sections.map((section) => (
-          <div class="flex w-full flex-col gap-4 border p-4">
-            <div class="mx-auto w-full max-w-[calc(var(--container-3xl)-2rem)]">
-              <h3 class="m-0 mb-2">
-                <span class="text-primary font-medium">Q.</span>{' '}
-                {section.question}
+</Layout>                {section.question}
               </h3>
               <p class="text-muted-foreground m-0 text-[13px] leading-5">
                 <span class="text-primary font-medium">A.</span>
