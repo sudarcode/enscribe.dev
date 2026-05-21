@@ -26,6 +26,15 @@
   --color-ring: var(--ring);
 }
 
+/* custom fonts */
+  --font-caveat: Caveat;
+  --font-bon-vivant: 'Bon Vivant';
+  --font-playfair-display: 'Playfair Display';
+  --font-pp-editorial-new: 'PP Editorial New';
+  --font-mudstone-sans: 'Mudstone Sans';
+  --font-bricolage-grotesque: 'Bricolage Grotesque';
+
+
 @font-face {
   font-family: 'JetBrains Mono';
   src: url('/fonts/JetBrainsMono[wght].woff2') format('woff2-variations');
