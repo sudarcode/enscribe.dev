@@ -57,6 +57,13 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Caveat';
+  src: url('/fonts/Caveat.ttf') format('truetype');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --background: oklch(0.1722 0.0041 75);
