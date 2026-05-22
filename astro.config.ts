@@ -19,7 +19,7 @@ import tailwindcss from '@tailwindcss/vite'
 import svelte from '@astrojs/svelte';
 
 export default defineConfig({
-  site: 'https://enscribe.dev',
+  site: 'https://www.sudarblogger.com',
   integrations: [expressiveCode(), mdx(), react(), sitemap(), icon(), svelte()],
   vite: {
     plugins: [tailwindcss()],
