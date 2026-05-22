@@ -62,10 +62,10 @@ export default defineConfig({
     // v1.0.0 -> v3.0.0
     '/post/penanggungan-mojokerto':
       '/blog/gunung-penanggungan',
-    '/ctfs/pico/beginners-compilation':
-      '/blog/picoctf-2022-beginners-compilation',
-    '/ctfs/pico22/crypto/basic-mod1':
-      '/blog/picoctf-2022-beginners-compilation',
+    '/post/sh-terate':
+      '/blog/bagian-dari-sh-terate/',
+    '/post/pantai-telaga':
+      '/blog/pantai-dermaga',
     
     // v2.0.0 -> v3.0.0
     '/blog/actf-2023/gcd-query': '/blog/actf-2023-gcd-query',
