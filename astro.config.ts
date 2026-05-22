@@ -67,7 +67,7 @@ export default defineConfig({
     '/post/pantai-telaga':
       '/blog/pantai-dermaga',
     '/post/makam-mbah-jabbar-tuban':
-      '/blog/makam-aljabbar-tuban',
+      '/blog/tuban/makam-aljabbar-tuban',
     
     // v2.0.0 -> v3.0.0
     '/blog/actf-2023/gcd-query': '/blog/actf-2023-gcd-query',
