@@ -68,6 +68,8 @@ export default defineConfig({
       '/blog/pantai-dermaga',
     '/post/makam-mbah-jabbar-tuban':
       '/blog/tuban/makam-aljabbar-tuban',
+    '/post/masjid-namira-lamongan':
+      '/blog/tuban/masjid-namira',
     
     // v2.0.0 -> v3.0.0
     '/blog/actf-2023/gcd-query': '/blog/actf-2023-gcd-query',
